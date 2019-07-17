@@ -1,11 +1,10 @@
 package com.revature;
 
-/**
- * Hello world!
- *
- */
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+    	ConnectionUtil connection = new ConnectionUtil();
+        MainMenu mainMenu = new MainMenu(connection.getConnection()); 
+        mainMenu.displayMenu();
+        connection.close();
     }
 }
